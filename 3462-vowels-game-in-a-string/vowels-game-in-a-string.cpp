@@ -1,17 +1,17 @@
 class Solution {
 public:
     bool doesAliceWin(string s) {
-        int totalVowels = 0;
+        int total = 0;
         for (char c : s) {
-            if (isVowel(c)) {
-                totalVowels++;
+            if (isvowel(c)) {
+                total++;
             }
         }       
-        return totalVowels > 0;
+        return total > 0;
     }
     
 private:
-    bool isVowel(char c) {
+    bool isvowel(char c) {
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
     }
 };
