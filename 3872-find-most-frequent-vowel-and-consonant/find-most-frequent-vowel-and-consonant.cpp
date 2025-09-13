@@ -3,7 +3,7 @@ public:
     int maxFreqSum(string s) {
         array<int, 26> freq{};
         for (char c : s) freq[c - 'a']++;
-        auto isVowel = [](char ch) {
+        auto vowel = [](char ch) {
             return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
         };
 
@@ -13,7 +13,7 @@ public:
         }
         for (int i = 0; i < 26; i++) {
             char ch = 'a' + i;
-            if (isVowel(ch)) continue;
+            if (vowel(ch)) continue;
             maxY = max(maxY, freq[i]);
         }
 
